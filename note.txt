@@ -1,0 +1,9 @@
+Question: https://www.hackerrank.com/challenges/larrys-array/problem
+
+Overview of Solution:
+The number of inversions in a set is the number of unique instances of the condition 
+s[i] > s[j] for all i < j and i, j < len(s) within set s.
+The size-3 subset rotation has the property that it increases or reduces the inversion number
+of s by 2. A set with inversion 0 is basically a sorted set in ascending order. Therefore a
+set with an even inversion number can always -by a sequence of size-3 subset rotations- have its
+inversion number reduced to zero (an ordered set). 

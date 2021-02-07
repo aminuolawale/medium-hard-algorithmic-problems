@@ -3,4 +3,14 @@ Question: https://www.hackerrank.com/challenges/non-divisible-subset/problem
 Overview of Solution:
 If two numbers a and b would add up to be divisible by k, then a%k = i and b%k = k-i where
 i is some positive integer. Therefore for each remainder i we must choose numbers from the 
-set S such that we have no pair a,b such that a%k = i and b%k = k-i
+set S such that we have no pair a,b such that a%k = i and b%k = k-i.
+We count the number of elements within S for each remainder into a frequency array f[i].
+We then loop through f[i] and accumulate the maximum of f[i] and f[k-i]. This should give
+us the size of the maximal nondivisible array.
+
+But:
+1. for i=0, we want to make sure we select at most 1 element because two will render the resulting
+set invalid.
+
+2. if k is an even number then any number with remainder i = k//2 must occur only once or else
+the set would be invalid.
