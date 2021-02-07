@@ -1,0 +1,6 @@
+Question: https://www.hackerrank.com/challenges/non-divisible-subset/problem
+
+Overview of Solution:
+If two numbers a and b would add up to be divisible by k, then a%k = i and b%k = k-i where
+i is some positive integer. Therefore for each remainder i we must choose numbers from the 
+set S such that we have no pair a,b such that a%k = i and b%k = k-i
